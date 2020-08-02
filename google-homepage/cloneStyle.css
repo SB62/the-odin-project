@@ -1,0 +1,59 @@
+* {
+  font-size: 10px;
+  background-color: #ffffff;
+}
+
+a {
+  padding: 0px 0px 0px 27px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header . header"
+    ". logo ."
+    ". searchbar ."
+    ". searchButtons ."
+    "footer . footer";
+  justify-content: space-between;
+}
+
+#logo {
+  grid-area: 2/2/3/3;
+  align-self: center;
+  justify-self: center;
+}
+
+#searchButtons {
+  grid-area: 4 / 2 / 5 /3;
+  justify-self: center;
+}
+
+#searchBar {
+  grid-area: 3/2/4/3;
+  justify-self: center;
+}
+.leftSide {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-self: left;
+}
+
+.rightSide {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  justify-self: right;
+}
+.header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.footer {
+  background-color: #efefef;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  font-size: 1.6rem;
+}
